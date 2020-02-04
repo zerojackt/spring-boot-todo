@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+{{> include/header}}
+
+
+
+</head>
+
+<body>
+
+
+{{> include/nav}}
+
+
+
+
+
+	
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Maven+Pro:500' rel='stylesheet' type='text/css'>
+
+  
+
+
+ <section class="list-wrap">
+
+   <label for="search-text">Search the list</label>
+  <input type="text" id="search-text" placeholder="search" class="search-box">
+    <span class="list-count"></span>
+    
+    
+		<ul id="list">
+		  {{#todone}}
+		  
+		  <li class="in">{{todone}} 
+			  <div> 
+			
+				  <a href="/add/done/{{id}}">clear</a>
+			  
+			  </div>
+		   </li>
+		  
+		  {{/todone}}
+		
+		  <span class="empty-item">no results</span>
+		</ul>
+ </section>
+   
+     <p class="cta">
+    <br /> 
+</p>
+
+
+
+</body>
+
+{{> include/footer}}
+
+</html>
